@@ -68,18 +68,26 @@ public class ControlFlowAssignment {
 					  String someStringTen = scanner.next();
 					  System.out.println("Enter a number between 1 and 50: ");
 					  Integer someStringEleven = scanner.nextInt();
-					  //Random rand = new Random();
-					  //rand.setSeed(1);
-					  //int randomNumberGenerator = rand.nextInt(51);
-					  //for(int i = 1; i <=6; i++) {
-					//	  System.out.println(randomNumberGenerator);
-					  //}
+					  Random rand = new Random();
+					  int anArray[] = new int[3];
+					  for(int i = 0; i <anArray.length; ++i) {
+						  anArray[i] = rand.nextInt(65)+1; //0 -> 1 and 64 -> 65
+					  }
+					  int PowerBallArray[] = new int[7];
+					  PowerBallArray[0] = Math.abs((someStringEight-anArray[1])%66+1);
+					  PowerBallArray[1] = someStringTen.charAt(0)%66+1;
+					  PowerBallArray[2] = (someStringNine + someStringSix)%66+1;
+					  PowerBallArray[3] = 42;
+					  PowerBallArray[4] = (someStringFive + someStringNine)%66+1;
+					  PowerBallArray[5] = (someStringEight*anArray[2])%66+1;
+					  System.out.println("Lottery Numbers" + ": " + PowerBallArray[0] + ", " + PowerBallArray[1] + ", " + PowerBallArray[2] + ", " + PowerBallArray[3] + ", " + PowerBallArray[4] + "  Magic Ball: " + PowerBallArray[5]);
 					  System.out.println("Would you like to generate another set of numbers? ");
 					  String someStringTwelve = scanner.next();
 					  if(someStringTwelve.equals(s) || someStringTwelve.equals(b)) {
 						  String someStringThirteen = scanner.nextLine(); 
 						  continue outer;
 					  }else {
+						  System.out.println("Thank you for participating.");
 						  break;
 					  }
 				  }
