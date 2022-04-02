@@ -29,5 +29,11 @@ public class AsciiChars {
 		  AsciiChars.printNumbers();
 		  AsciiChars.printLowerCase();
 		  AsciiChars.printUpperCase();
+		  
+		  Scanner scanner = new Scanner(System.in);
+		  System.out.println("Please enter your name: " + scanner);     // type a word and hit enter
+		  String someString = scanner.nextLine();
+		  System.outprintln("Hello " + someString);
+		  
 	  }
  }
